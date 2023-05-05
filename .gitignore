@@ -104,3 +104,4 @@ dist
 .tern-port
 
 /test/
+/02-write-file/new_text.txt
