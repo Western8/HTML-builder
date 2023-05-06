@@ -13,7 +13,7 @@ function copyFiles() {
   fs.readdir(dirSrc, (err, files) => {
     files.forEach(file => {
       fs.copyFile(path.join(dirSrc, file), path.join(dirDest, file), () => {});
-    })
+    });
   });
 }
 
@@ -23,8 +23,8 @@ fs.access(dirDest, (err) => {
     copyFiles();
   } else {
     fs.readdir(dirDest, (err, files) => {
-      files.forEach(file => {fs.unlink(path.join(dirDest, file), showError)})
+      files.forEach(file => {fs.unlink(path.join(dirDest, file), showError);});
       copyFiles();
-      });
-  };
-})
+    });
+  }
+});
