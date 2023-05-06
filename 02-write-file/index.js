@@ -1,5 +1,6 @@
 const fs = require('fs');
-const writeStream = fs.createWriteStream('./02-write-file/new_text.txt');
+const path = require('path');
+const writeStream = fs.createWriteStream(path.join(__dirname, 'new_text.txt'));
 
 process.stdout.write('Hello, human of the world!\n');
 process.stdout.write('Enter something interesting: ');
